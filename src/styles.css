@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; }
+@font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ Regular.otf');
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ Light.otf');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ Medium.otf');
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ DemiBold.otf');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ Bold.otf');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ UltraBold.otf');
+    font-weight: 800;
+  }
+  
+  @font-face {
+    font-family: 'Pioni ML v2 AAA';
+    src: url('assets/fonts/Ploni\ ML\ v2\ AAA\ Black.otf');
+    font-weight: 900;
+  }
+  
+  * {
+    font-family: 'Pioni ML v2 AAA';
+  }

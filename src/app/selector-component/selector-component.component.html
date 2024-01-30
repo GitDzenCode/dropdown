@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <mat-form-field appearance="fill" dir="rtl">
+      <mat-label>סטטוס בקשה</mat-label>
+      <mat-icon matSuffix class="icon-select" [ngClass]="{'open': isOpen}">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.60432 14.4218L11.2622 7.76389C11.6686 7.35751 12.3257 7.35751 12.732 7.76389L19.39 14.4218C19.8755 14.9074 19.8755 15.6911 19.39 16.1766L19.289 16.2672C18.8012 16.66 18.0883 16.6298 17.6351 16.1766L12.0001 10.5341L6.35912 16.1766C5.87032 16.6555 5.08803 16.6524 4.60432 16.1687C4.12669 15.6911 4.12669 14.8994 4.60432 14.4218Z" fill="#232873"/>
+        </svg>
+      </mat-icon>
+  <!--    <mat-icon matSuffix *ngIf="!isOpen">keyboard_arrow_down</mat-icon>-->
+      <mat-select #selector [(ngModel)]="selectedValue" #select="matSelect" (closed)="onDropdownClosed()"
+                  (opened)="onDropdownOpened()">
+        <mat-option *ngFor="let option of options" [value]="option.value" (click)="selector.open()" dir="ltr">
+          {{option.label}}
+        </mat-option>
+        <div class="divider"></div>
+        <div class="button-container">
+          <button mat-button color="primary" class="confirm-button"
+                  [disabled]="!selectedValue && selectedValue==currentSelectedValue" (click)="confirm()">הצגת בקשות</button>
+          <button mat-flat-button *ngIf="currentSelectedValue" class="reset-button"
+                  [disabled]="!currentSelectedValue" (click)="reset()">ניקוי בחירה</button>
+        </div>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
